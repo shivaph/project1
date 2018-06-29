@@ -32,7 +32,7 @@ class DetailGroup(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = serializers.GroupSerializer
 
 class GroupMembersList(generics.ListAPIView):
-    serializer_class = serializers.UserSerializer
+    serializer_class = serializers.GroupMembersSerializer
     def get_queryset(self):
         #qs = super().get_queryset()
         #return qs.filter(mobile_num__=self.kwargs.mobile_num)

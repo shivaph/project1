@@ -18,7 +18,7 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = "__all__"
         model = models.Group
 
-#class GroupMembersSerializer(serializers.ModelSerializer):
-    #class Meta:
-        #fields = "__all__"
-        #model = models.GroupMembers
+class GroupMembersSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = ("abbrev",)
+        model = models.User
